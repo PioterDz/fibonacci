@@ -12,3 +12,11 @@ function fibonacci(startingNumber) {
     }
     return startingNumber === 0 ? [0] : calc([0,1]);
 }
+
+function nwd(a, b) {
+    if(a === b) {
+        return a;
+    } else {
+        return a > b ? nwd(a - b, b) : nwd(a, b - a);
+    }
+}
